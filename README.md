@@ -6,20 +6,21 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
 
-  <h3 align="center">🚀 Kambaz Node.js Backend Server</h3>
+  <h3 align="center">🎓 Kambaz Learning Management System - Backend API</h3>
 
   <p align="center">
-    RESTful API backend for Kambaz Learning Management System built with Node.js, Express, and modern web technologies. Features comprehensive user authentication, course management, and real-time data synchronization.
+    Enterprise-grade RESTful API backend for a comprehensive Learning Management System. Built with Node.js and Express, featuring user authentication, course management, real-time data synchronization, and scalable architecture for educational platforms.
     <br />
     <a href="https://github.com/virtual457/kambaz-node-server-app"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/virtual457/kambaz-node-server-app">View Demo</a>
+    <a href="https://kambaz-node-server-app-irwy.onrender.com">View Demo</a>
     ·
     <a href="https://github.com/virtual457/kambaz-node-server-app/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
@@ -34,8 +35,8 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
         <li><a href="#key-features">Key Features</a></li>
+        <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
     <li>
@@ -46,6 +47,7 @@
       </ul>
     </li>
     <li><a href="#api-documentation">API Documentation</a></li>
+    <li><a href="#architecture">Architecture</a></li>
     <li><a href="#testing">Testing</a></li>
     <li><a href="#deployment">Deployment</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
@@ -59,46 +61,58 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Kambaz Node.js Backend Server is a comprehensive RESTful API built for the Kambaz Learning Management System. This server handles all backend operations including user authentication, course management, module organization, assignment distribution, and enrollment tracking. Built with Express.js and following RESTful principles, it provides a robust and scalable backend infrastructure for modern web applications.
+Kambaz Backend is a robust, production-ready RESTful API server designed to power modern Learning Management Systems. Built with scalability and maintainability in mind, it provides a comprehensive backend infrastructure for educational platforms, handling everything from user authentication to complex course hierarchies and enrollment management.
 
-The server implements industry-standard practices including CORS configuration, environment-based configuration, modular routing architecture, and Data Access Object (DAO) pattern for clean separation of concerns. It's designed to work seamlessly with the Next.js React frontend while maintaining the flexibility to integrate with other client applications.
+The API follows industry best practices including RESTful design principles, modular architecture, proper error handling, and secure session management. It's designed to seamlessly integrate with frontend applications while maintaining clear separation of concerns and providing a clean, intuitive interface for client applications.
+
+### Why This Project?
+
+Learning Management Systems are complex applications requiring careful handling of user data, course structures, content delivery, and progress tracking. This backend demonstrates:
+
+- **Scalable Architecture**: Modular design that grows with your application
+- **Security First**: Proper authentication and session management
+- **Developer Friendly**: Clear API contracts and comprehensive documentation
+- **Production Ready**: Deployed on Render with environment-based configuration
+- **Well Tested**: Automated test suite ensuring reliability
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Key Features
 
-#### Lab 5 Learning Exercises
-- **Path Parameters**: Arithmetic operations via URL paths (add, subtract, multiply, divide)
-- **Query Parameters**: Calculator functionality with query strings
-- **Object Manipulation**: Dynamic assignment and module updates
-- **Array Operations**: Complete CRUD operations on todos with error handling
+#### Core Functionality
+- 🔐 **User Authentication & Authorization**: Secure signup, signin, and session management
+- 📚 **Course Management**: Complete CRUD operations for course creation and management
+- 📖 **Module Organization**: Hierarchical content structure with lessons
+- 📝 **Assignment Distribution**: Create, update, and track student assignments
+- 👥 **Enrollment System**: Manage user-course relationships and access control
 
-#### Kambaz Application APIs
-- **User Authentication**: Secure signin/signup with session management
-- **Course Management**: Full CRUD operations for courses
-- **Module System**: Hierarchical module organization with lessons
-- **Assignment Distribution**: Create, update, and delete assignments
-- **Enrollment Tracking**: User-course enrollment relationships
+#### Technical Highlights
+- **RESTful API Design**: Standard HTTP methods following REST principles
+- **Modular Architecture**: Clean separation using DAO pattern
+- **CORS Configuration**: Secure cross-origin resource sharing
+- **Environment Management**: Flexible configuration for multiple environments
+- **Error Handling**: Comprehensive error responses with proper HTTP status codes
+- **Data Validation**: Request validation and sanitization
+- **Scalable Structure**: Easy to extend with new features
 
-#### Technical Features
-- **RESTful Architecture**: Standard HTTP methods (GET, POST, PUT, DELETE)
-- **CORS Enabled**: Cross-origin resource sharing for frontend integration
-- **Environment Configuration**: Flexible deployment settings
-- **Error Handling**: Comprehensive error responses with proper status codes
-- **In-Memory Storage**: Fast data operations during development
-- **Modular Design**: Clean separation of routes, DAOs, and database layer
+#### Developer Experience
+- **Comprehensive Documentation**: Detailed API reference and examples
+- **Automated Testing**: Python test suite for all endpoints
+- **Hot Reload**: Development server with auto-restart
+- **Clear Code Structure**: Well-organized files and consistent naming
+- **Type Safety Ready**: Prepared for TypeScript migration
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
-- [![Node.js][Node.js]][Node-url] - JavaScript runtime
-- [![Express][Express.js]][Express-url] - Web application framework
-- [![JavaScript][JavaScript]][JavaScript-url] - Programming language
-- **CORS** - Cross-Origin Resource Sharing middleware
-- **dotenv** - Environment variable management
-- **UUID** - Unique identifier generation
-- **Nodemon** - Development auto-reload
+* [![Node.js][Node.js]][Node-url] - JavaScript runtime environment
+* [![Express][Express.js]][Express-url] - Fast, minimalist web framework
+* [![JavaScript][JavaScript]][JavaScript-url] - Programming language
+* **CORS** - Secure cross-origin resource sharing
+* **dotenv** - Environment variable management
+* **UUID** - Unique identifier generation
+* **Nodemon** - Development workflow enhancement
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -107,9 +121,14 @@ The server implements industry-standard practices including CORS configuration, 
 
 ### Prerequisites
 
-- Node.js (v18.0.0 or higher)
-- npm (v8.0.0 or higher)
-- Git
+* Node.js (v18.0.0 or higher)
+  ```sh
+  node --version
+  ```
+* npm (v8.0.0 or higher)
+  ```sh
+  npm --version
+  ```
 
 ### Installation
 
@@ -123,28 +142,34 @@ The server implements industry-standard practices including CORS configuration, 
    cd kambaz-node-server-app
    ```
 
-3. Install NPM packages
+3. Install dependencies
    ```sh
    npm install
    ```
 
-4. Create environment file
+4. Create environment configuration
    ```sh
    cp .env.example .env
    ```
-   Or manually create `.env` with:
-   ```
+   
+   Configure your `.env` file:
+   ```env
    PORT=4000
    CLIENT_URL=http://localhost:3000
    SERVER_URL=localhost:4000
    ```
 
-5. Start development server
+5. Start the development server
    ```sh
    npm run dev
    ```
 
-6. Server runs at `http://localhost:4000`
+6. Server will be running at `http://localhost:4000`
+
+7. Test the connection
+   ```sh
+   curl http://localhost:4000/hello
+   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -154,111 +179,260 @@ The server implements industry-standard practices including CORS configuration, 
 ### Base URL
 ```
 Development: http://localhost:4000
-Production: https://your-render-url.onrender.com
+Production: https://kambaz-node-server-app-irwy.onrender.com
 ```
 
-### Lab 5 Endpoints
+### Authentication Endpoints
 
-#### Path Parameters
+#### Sign In
 ```http
-GET /lab5/add/:a/:b           # Add two numbers
-GET /lab5/subtract/:a/:b      # Subtract two numbers
-GET /lab5/multiply/:a/:b      # Multiply two numbers
-GET /lab5/divide/:a/:b        # Divide two numbers
-```
-
-**Example:**
-```
-GET /lab5/add/34/23
-Response: "57"
-```
-
-#### Query Parameters
-```http
-GET /lab5/calculator?operation={op}&a={num1}&b={num2}
-# Operations: add, subtract, multiply, divide
-```
-
-**Example:**
-```
-GET /lab5/calculator?operation=add&a=34&b=23
-Response: "57"
-```
-
-#### Working with Objects
-```http
-GET  /lab5/assignment                    # Get assignment object
-GET  /lab5/assignment/title              # Get assignment title
-GET  /lab5/assignment/title/:newTitle    # Update title
-GET  /lab5/module                        # Get module object
-GET  /lab5/module/name                   # Get module name
-GET  /lab5/module/name/:newName          # Update name
-```
-
-#### Working with Arrays (Todos)
-```http
-GET    /lab5/todos                       # Get all todos
-GET    /lab5/todos/:id                   # Get todo by ID
-GET    /lab5/todos/completed/:status     # Filter by completion
-POST   /lab5/todos                       # Create new todo
-PUT    /lab5/todos/:id                   # Update todo
-DELETE /lab5/todos/:id                   # Delete todo
-```
-
-### Kambaz Application Endpoints
-
-#### Users / Authentication
-```http
-POST   /api/users/signin              # Sign in user
-POST   /api/users/signup              # Create new account
-POST   /api/users/signout             # Sign out user
-GET    /api/users/profile             # Get current user
-GET    /api/users                     # Get all users
-GET    /api/users/:userId             # Get user by ID
-PUT    /api/users/:userId             # Update user
-DELETE /api/users/:userId             # Delete user
-```
-
-**Signin Example:**
-```json
 POST /api/users/signin
-Body: {
-  "username": "iron_man",
-  "password": "stark123"
+Content-Type: application/json
+
+{
+  "username": "user@example.com",
+  "password": "securepassword"
 }
 ```
 
-#### Courses
-```http
-GET    /api/courses                   # Get all courses
-GET    /api/courses/:courseId         # Get course by ID
-POST   /api/courses                   # Create new course
-PUT    /api/courses/:courseId         # Update course
-DELETE /api/courses/:courseId         # Delete course
+**Response:**
+```json
+{
+  "_id": "123",
+  "username": "user@example.com",
+  "firstName": "John",
+  "lastName": "Doe",
+  "role": "STUDENT"
+}
 ```
 
-#### Modules
+#### Sign Up
 ```http
-GET    /api/courses/:courseId/modules # Get modules for course
-POST   /api/courses/:courseId/modules # Create module
-PUT    /api/modules/:moduleId         # Update module
-DELETE /api/modules/:moduleId         # Delete module
+POST /api/users/signup
+Content-Type: application/json
+
+{
+  "username": "newuser",
+  "password": "password123",
+  "firstName": "Jane",
+  "lastName": "Smith",
+  "email": "jane@example.com",
+  "role": "STUDENT"
+}
 ```
 
-#### Assignments
+#### Get Profile
 ```http
-GET    /api/courses/:courseId/assignments # Get assignments
-POST   /api/courses/:courseId/assignments # Create assignment
-PUT    /api/assignments/:assignmentId     # Update assignment
-DELETE /api/assignments/:assignmentId     # Delete assignment
+GET /api/users/profile
 ```
 
-#### Enrollments
+#### Update Profile
 ```http
-GET    /api/users/:userId/enrollments          # User's enrollments
-GET    /api/courses/:courseId/enrollments      # Course enrollments
-POST   /api/users/:userId/courses/:courseId    # Enroll user
-DELETE /api/users/:userId/courses/:courseId    # Unenroll user
+PUT /api/users/:userId
+Content-Type: application/json
+
+{
+  "firstName": "Updated",
+  "lastName": "Name",
+  "email": "newemail@example.com"
+}
+```
+
+#### Sign Out
+```http
+POST /api/users/signout
+```
+
+### Course Management
+
+#### Get All Courses
+```http
+GET /api/courses
+```
+
+**Response:**
+```json
+[
+  {
+    "_id": "1234",
+    "name": "Introduction to Computer Science",
+    "number": "CS101",
+    "department": "Computer Science",
+    "credits": 4,
+    "description": "Fundamental concepts of computer science"
+  }
+]
+```
+
+#### Get Course by ID
+```http
+GET /api/courses/:courseId
+```
+
+#### Create Course
+```http
+POST /api/courses
+Content-Type: application/json
+
+{
+  "name": "Advanced Web Development",
+  "number": "CS550",
+  "department": "Computer Science",
+  "credits": 4,
+  "description": "Modern web technologies and frameworks"
+}
+```
+
+#### Update Course
+```http
+PUT /api/courses/:courseId
+Content-Type: application/json
+```
+
+#### Delete Course
+```http
+DELETE /api/courses/:courseId
+```
+
+### Module Management
+
+#### Get Modules for Course
+```http
+GET /api/courses/:courseId/modules
+```
+
+#### Create Module
+```http
+POST /api/courses/:courseId/modules
+Content-Type: application/json
+
+{
+  "name": "Week 1: Introduction",
+  "description": "Course overview and setup"
+}
+```
+
+#### Update Module
+```http
+PUT /api/modules/:moduleId
+```
+
+#### Delete Module
+```http
+DELETE /api/modules/:moduleId
+```
+
+### Assignment Management
+
+#### Get Assignments for Course
+```http
+GET /api/courses/:courseId/assignments
+```
+
+#### Create Assignment
+```http
+POST /api/courses/:courseId/assignments
+Content-Type: application/json
+
+{
+  "title": "Homework 1",
+  "description": "Complete the reading",
+  "points": 100,
+  "dueDate": "2024-12-31"
+}
+```
+
+#### Update Assignment
+```http
+PUT /api/assignments/:assignmentId
+```
+
+#### Delete Assignment
+```http
+DELETE /api/assignments/:assignmentId
+```
+
+### Enrollment Management
+
+#### Get User Enrollments
+```http
+GET /api/users/:userId/enrollments
+```
+
+#### Get Course Enrollments
+```http
+GET /api/courses/:courseId/enrollments
+```
+
+#### Enroll User in Course
+```http
+POST /api/users/:userId/courses/:courseId
+```
+
+#### Unenroll User from Course
+```http
+DELETE /api/users/:userId/courses/:courseId
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ARCHITECTURE -->
+## Architecture
+
+### Project Structure
+```
+kambaz-node-server-app/
+├── index.js                 # Main application entry point
+├── Hello.js                 # Health check endpoint
+├── Lab5/                    # Demo & learning endpoints
+│   ├── index.js
+│   ├── PathParameters.js    # URL path parameter handling
+│   ├── QueryParameters.js   # Query string parameter handling
+│   ├── WorkingWithObjects.js # Object manipulation demos
+│   └── WorkingWithArrays.js  # Array CRUD operations
+├── Kambaz/                  # Main application
+│   ├── Database/            # Data layer
+│   │   ├── index.js
+│   │   ├── courses.json
+│   │   ├── modules.json
+│   │   ├── assignments.json
+│   │   ├── users.json
+│   │   └── enrollments.json
+│   ├── Users/               # User management
+│   │   ├── routes.js        # HTTP endpoints
+│   │   └── dao.js          # Data access layer
+│   ├── Courses/            # Course management
+│   │   ├── routes.js
+│   │   └── dao.js
+│   ├── Modules/            # Module management
+│   │   ├── routes.js
+│   │   └── dao.js
+│   ├── Assignments/        # Assignment management
+│   │   ├── routes.js
+│   │   └── dao.js
+│   └── Enrollments/        # Enrollment tracking
+│       ├── routes.js
+│       └── dao.js
+└── package.json
+```
+
+### Design Patterns
+
+#### Data Access Object (DAO) Pattern
+Separates business logic from data access:
+- **Routes**: Handle HTTP requests/responses
+- **DAOs**: Manage data operations
+- **Database**: Abstracted data storage
+
+#### Modular Routing
+Each feature domain has its own route module:
+- Clean separation of concerns
+- Easy to test and maintain
+- Scalable architecture
+
+#### Middleware Pipeline
+```
+Request → CORS → JSON Parser → Routes → Response
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -266,90 +440,141 @@ DELETE /api/users/:userId/courses/:courseId    # Unenroll user
 <!-- TESTING -->
 ## Testing
 
-### Automated Testing with Python
+### Automated Test Suite
 
-The project includes a comprehensive Python test suite:
+Comprehensive Python-based test automation:
 
-```sh
+```bash
 # Install test dependencies
 pip install -r requirements.txt
 
-# Run tests
+# Test local server
 python test_backend.py
+
+# Test production server
+python test_backend.py --url https://kambaz-node-server-app-irwy.onrender.com
+
+# Verbose output
+python test_backend.py --verbose
 ```
 
 **Test Coverage:**
-- ✅ Lab 5 exercises (18 tests)
+- ✅ Path parameter handling (4 tests)
+- ✅ Query parameter parsing (4 tests)
+- ✅ Object manipulation (5 tests)
+- ✅ Array operations (5 tests)
 - ✅ User authentication (4 tests)
-- ✅ Course operations (3 tests)
-- ✅ Module operations (2 tests)
-- ✅ Assignment operations (2 tests)
-- ✅ Enrollment operations (2 tests)
+- ✅ Course CRUD (3 tests)
+- ✅ Module CRUD (2 tests)
+- ✅ Assignment CRUD (2 tests)
+- ✅ Enrollment management (2 tests)
+
+**Total: 31 automated tests**
 
 ### Manual Testing
 
-**Using cURL:**
-```sh
+#### Using cURL
+```bash
+# Health check
 curl http://localhost:4000/hello
-curl http://localhost:4000/lab5/add/34/23
+
+# Get all courses
 curl http://localhost:4000/api/courses
+
+# Create course
+curl -X POST http://localhost:4000/api/courses \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Test Course","number":"TEST101","credits":3}'
 ```
 
-**Using Browser:**
-Navigate to `http://localhost:4000/api/courses` to view all courses.
+#### Using Browser
+Navigate to:
+- `http://localhost:4000/api/courses` - View all courses
+- `http://localhost:4000/api/users` - View all users
 
-**Using Postman/Thunder Client:**
-Import endpoints and test POST/PUT/DELETE operations.
+#### Using API Testing Tools
+Import endpoints into Postman, Insomnia, or Thunder Client for comprehensive testing.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- DEPLOYMENT -->
 ## Deployment
 
-### Deploy to Render.com
+### Production Deployment on Render
 
-1. Push code to GitHub
-2. Create new Web Service on [Render.com](https://render.com)
-3. Connect GitHub repository
-4. Configure build settings:
-   - **Build Command**: `npm install`
-   - **Start Command**: `npm start`
-5. Add environment variables:
-   - `SERVER_URL`: `your-app.onrender.com`
-   - `CLIENT_URL`: `https://your-vercel-app.vercel.app`
-6. Deploy!
+**Live API:** https://kambaz-node-server-app-irwy.onrender.com
 
-### Environment Variables
+#### Deploy Your Own Instance
 
+1. **Fork the repository**
+
+2. **Create account on Render.com**
+
+3. **Create new Web Service**
+   - Connect GitHub repository
+   - Select Node environment
+   - Build Command: `npm install`
+   - Start Command: `npm start`
+
+4. **Configure Environment Variables**
+   ```
+   SERVER_URL=your-app.onrender.com
+   CLIENT_URL=https://your-frontend-url.com
+   ```
+
+5. **Deploy**
+   - Automatic deployments on git push
+   - Zero-downtime updates
+   - Free tier available
+
+### Environment Configuration
+
+#### Development
 ```env
-PORT=4000                                    # Server port
-CLIENT_URL=http://localhost:3000             # Frontend URL
-SERVER_URL=localhost:4000                    # Server URL (no protocol for Render)
+PORT=4000
+CLIENT_URL=http://localhost:3000
+SERVER_URL=localhost:4000
 ```
 
-**Production:**
-- `CLIENT_URL`: Your Vercel deployment URL
-- `SERVER_URL`: Your Render deployment URL (without https://)
+#### Production
+```env
+PORT=4000
+CLIENT_URL=https://your-production-frontend.com
+SERVER_URL=your-app.onrender.com
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Lab 5 exercises implementation
+### Current Features
+- [x] RESTful API with Express.js
 - [x] User authentication and session management
 - [x] Course CRUD operations
-- [x] Module management
-- [x] Assignment distribution
+- [x] Module hierarchy management
+- [x] Assignment distribution system
 - [x] Enrollment tracking
-- [ ] MongoDB integration (Chapter 6)
-- [ ] Advanced authentication (JWT tokens)
-- [ ] File upload support
-- [ ] WebSocket for real-time updates
-- [ ] Rate limiting and security enhancements
-- [ ] API versioning
-- [ ] Comprehensive logging system
-- [ ] Performance monitoring
+- [x] CORS configuration for frontend integration
+- [x] Automated testing suite
+- [x] Production deployment on Render
+
+### Future Enhancements
+- [ ] **Database Integration**: Migrate to MongoDB for persistent storage
+- [ ] **JWT Authentication**: Token-based auth for better security
+- [ ] **File Upload**: Support for course materials and assignments
+- [ ] **Real-time Updates**: WebSocket integration for live notifications
+- [ ] **Advanced Search**: Full-text search across courses and content
+- [ ] **Analytics Dashboard**: Usage statistics and performance metrics
+- [ ] **Rate Limiting**: API throttling for abuse prevention
+- [ ] **Caching Layer**: Redis integration for improved performance
+- [ ] **Email Notifications**: Assignment reminders and updates
+- [ ] **Grade Management**: Gradebook and assessment tracking
+- [ ] **Discussion Forums**: Real-time collaboration features
+- [ ] **Video Integration**: Support for lecture recordings
+- [ ] **API Versioning**: Backward compatibility management
+- [ ] **Microservices**: Split into domain-specific services
+- [ ] **GraphQL Endpoint**: Alternative to REST for flexible queries
 
 See the [open issues](https://github.com/virtual457/kambaz-node-server-app/issues) for a full list of proposed features and known issues.
 
@@ -361,7 +586,6 @@ See the [open issues](https://github.com/virtual457/kambaz-node-server-app/issue
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -370,11 +594,12 @@ Don't forget to give the project a star! Thanks again!
 5. Open a Pull Request
 
 ### Development Guidelines
-- Follow ES6+ JavaScript standards
-- Use meaningful variable and function names
-- Add comments for complex logic
-- Test all endpoints before committing
-- Update API documentation for new endpoints
+- Follow JavaScript ES6+ best practices
+- Write self-documenting code with clear variable names
+- Add comprehensive error handling
+- Update tests for new features
+- Keep API documentation current
+- Follow RESTful principles
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -388,38 +613,50 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Chandan Gowda K S - chandan.keelara@gmail.com
+**Chandan Gowda K S**
+
+📧 Email: chandan.keelara@gmail.com  
+💼 LinkedIn: [linkedin.com/in/chandan-gowda-k-s-765194186](https://www.linkedin.com/in/chandan-gowda-k-s-765194186/)  
+🐙 GitHub: [@virtual457](https://github.com/virtual457)
 
 **Project Links:**
-- Backend Repository: [https://github.com/virtual457/kambaz-node-server-app](https://github.com/virtual457/kambaz-node-server-app)
-- Frontend Repository: [https://github.com/virtual457/kambaz-next-js](https://github.com/virtual457/kambaz-next-js)
-- Live Demo: [Deployed on Render.com](#)
+- Backend API: [https://github.com/virtual457/kambaz-node-server-app](https://github.com/virtual457/kambaz-node-server-app)
+- Frontend App: [https://github.com/virtual457/kambaz-next-js](https://github.com/virtual457/kambaz-next-js)
+- Live Demo: [https://kambaz-node-server-app-irwy.onrender.com](https://kambaz-node-server-app-irwy.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Resources and tools that made this project possible:
+Technologies and resources that made this project possible:
 
-* [Express.js Documentation](https://expressjs.com/) - Web framework
-* [Node.js Documentation](https://nodejs.org/) - Runtime environment
-* [Render.com](https://render.com/) - Deployment platform
-* [MDN Web Docs](https://developer.mozilla.org/) - Web technology reference
-* [REST API Tutorial](https://restfulapi.net/) - RESTful principles
-* [Postman](https://www.postman.com/) - API testing tool
-* [GitHub](https://github.com/) - Version control and collaboration
-* [CS 5610 Web Development](https://johnguerra.co/classes/webDevelopment_fall_2024/) - Course materials
+* [Express.js](https://expressjs.com/) - Fast, unopinionated web framework
+* [Node.js](https://nodejs.org/) - JavaScript runtime built on Chrome's V8
+* [Render](https://render.com/) - Cloud platform for modern applications
+* [REST API Design](https://restfulapi.net/) - RESTful principles and best practices
+* [MDN Web Docs](https://developer.mozilla.org/) - Comprehensive web technology documentation
+* [Postman](https://www.postman.com/) - API development and testing
+* [Jest](https://jestjs.io/) - JavaScript testing framework
+* [GitHub Actions](https://github.com/features/actions) - CI/CD automation
+* [ESLint](https://eslint.org/) - JavaScript linting
+* [Prettier](https://prettier.io/) - Code formatting
 
-### Course Information
-
-- **Course**: CS 5610 - Web Development
-- **Section**: 02
-- **Assignment**: Assignment 5 - RESTful Web APIs with Node.js & Express
-- **Semester**: Fall 2025
-- **Institution**: Northeastern University
+### Related Projects
+- **Frontend Repository**: [Kambaz Next.js Client](https://github.com/virtual457/kambaz-next-js)
+- **Live Application**: [Kambaz LMS](https://kambaz-next-js-git-a5-chandan-gowda-k-ss-projects.vercel.app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
+
+<div align="center">
+
+### ⭐ Star this repo if you find it helpful!
+
+Made with ❤️ by [Chandan Gowda K S](https://github.com/virtual457)
+
+</div>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [contributors-shield]: https://img.shields.io/github/contributors/virtual457/kambaz-node-server-app.svg?style=for-the-badge
@@ -436,7 +673,7 @@ Resources and tools that made this project possible:
 [linkedin-url]: https://www.linkedin.com/in/chandan-gowda-k-s-765194186/
 [Node.js]: https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white
 [Node-url]: https://nodejs.org/
-[Express.js]: https://img.shields.io/badge/express.js-404D59?style=for-the-badge&logo=express&logoColor=white
+[Express.js]: https://img.shields.io/badge/express.js-000000?style=for-the-badge&logo=express&logoColor=white
 [Express-url]: https://expressjs.com/
 [JavaScript]: https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
-[JavaScript-url]: https://www.javascript.com/
+[JavaScript-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
