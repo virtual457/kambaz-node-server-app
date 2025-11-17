@@ -33,25 +33,33 @@
 <!-- LIVE DEMO SECTION -->
 ## 🚀 Live Demo
 
+### Backend API (Render)
+
 <div align="center">
 
-### **Backend API (Render)**
 [![API Status](https://img.shields.io/website?url=https%3A%2F%2Fkambaz-node-server-app-irwy.onrender.com%2Fhello&style=for-the-badge&label=API%20STATUS)](https://kambaz-node-server-app-irwy.onrender.com/hello)
 
 **Base URL:** [https://kambaz-node-server-app-irwy.onrender.com](https://kambaz-node-server-app-irwy.onrender.com)
 
-Try these live endpoints:
+</div>
+
+**Try these live endpoints:**
 - [Health Check](https://kambaz-node-server-app-irwy.onrender.com/hello) - Test server status
 - [All Courses](https://kambaz-node-server-app-irwy.onrender.com/api/courses) - View course catalog
 - [All Users](https://kambaz-node-server-app-irwy.onrender.com/api/users) - View user list
 - [Calculator Demo](https://kambaz-node-server-app-irwy.onrender.com/lab5/calculator?operation=add&a=34&b=23) - Math operations
 
-### **Frontend Application (Vercel)**
+### Frontend Application (Vercel)
+
+<div align="center">
+
 [![Deployment Status](https://img.shields.io/badge/Vercel-Deployed-brightgreen?style=for-the-badge&logo=vercel)](https://kambaz-next-js-git-a5-chandan-gowda-k-ss-projects.vercel.app)
 
 **Live App:** [https://kambaz-next-js-git-a5-chandan-gowda-k-ss-projects.vercel.app](https://kambaz-next-js-git-a5-chandan-gowda-k-ss-projects.vercel.app)
 
-### **Architecture**
+</div>
+
+### Architecture
 ```
 ┌─────────────────────┐      HTTPS/REST      ┌──────────────────────┐
 │   Next.js Frontend  │ ←─────────────────→  │   Node.js Backend    │
@@ -59,8 +67,6 @@ Try these live endpoints:
 │   Port: 3000        │                      │   Port: 4000         │
 └─────────────────────┘                      └──────────────────────┘
 ```
-
-</div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
