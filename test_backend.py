@@ -10,35 +10,47 @@ This test suite validates all backend endpoints including:
 - Kambaz APIs (Users, Courses, Modules, Assignments, Enrollments)
 
 Requirements:
-    pip install requests pytest colorama
+    pip install requests colorama
 
 Usage:
+    # Test local server
     python test_backend.py
-    or
-    pytest test_backend.py -v
+    
+    # Test production server on Render
+    python test_backend.py --url https://your-app.onrender.com
+    
+    # Test with custom URL
+    python test_backend.py --url http://localhost:5000
+    
+    # Verbose output
+    python test_backend.py --verbose
 """
 
 import requests
 import json
+import argparse
 from typing import Dict, Any
 from colorama import Fore, Style, init
 
 # Initialize colorama for colored output
 init(autoreset=True)
 
-# Base URL - Change this to your Render URL when deployed
-BASE_URL = "http://localhost:4000"
+# Default URL
+DEFAULT_URL = "http://localhost:4000"
 
 class TestResult:
     """Track test results"""
-    def __init__(self):
+    def __init__(self, verbose=False):
         self.passed = 0
         self.failed = 0
         self.errors = []
+        self.verbose = verbose
     
-    def add_pass(self, test_name: str):
+    def add_pass(self, test_name: str, response=None):
         self.passed += 1
         print(f"{Fore.GREEN}✓ PASS: {test_name}{Style.RESET_ALL}")
+        if self.verbose and response:
+            print(f"  Response: {response.text[:100]}...")
     
     def add_fail(self, test_name: str, error: str):
         self.failed += 1
@@ -48,24 +60,31 @@ class TestResult:
     
     def print_summary(self):
         total = self.passed + self.failed
-        print(f"\n{Fore.CYAN}{'='*60}")
+        print(f"\n{Fore.CYAN}{'='*70}")
         print(f"TEST SUMMARY")
-        print(f"{'='*60}{Style.RESET_ALL}")
+        print(f"{'='*70}{Style.RESET_ALL}")
         print(f"Total Tests: {total}")
         print(f"{Fore.GREEN}Passed: {self.passed}{Style.RESET_ALL}")
         print(f"{Fore.RED}Failed: {self.failed}{Style.RESET_ALL}")
+        
+        if total > 0:
+            percentage = (self.passed / total) * 100
+            print(f"Success Rate: {Fore.CYAN}{percentage:.1f}%{Style.RESET_ALL}")
         
         if self.failed > 0:
             print(f"\n{Fore.RED}Failed Tests:{Style.RESET_ALL}")
             for test_name, error in self.errors:
                 print(f"  - {test_name}: {error}")
         
-        if self.passed == total:
-            print(f"\n{Fore.GREEN}🎉 ALL TESTS PASSED!{Style.RESET_ALL}")
-        else:
+        if self.passed == total and total > 0:
+            print(f"\n{Fore.GREEN}{'='*70}")
+            print(f"🎉 ALL TESTS PASSED! 🎉")
+            print(f"{'='*70}{Style.RESET_ALL}")
+        elif self.failed > 0:
             print(f"\n{Fore.YELLOW}⚠️  Some tests failed. Review errors above.{Style.RESET_ALL}")
 
-results = TestResult()
+# Global results object
+results = None
 
 def test_endpoint(name: str, method: str, url: str, expected_status: int = 200, 
                   data: Dict = None, check_response: callable = None):
@@ -74,13 +93,13 @@ def test_endpoint(name: str, method: str, url: str, expected_status: int = 200,
         full_url = f"{BASE_URL}{url}"
         
         if method == "GET":
-            response = requests.get(full_url)
+            response = requests.get(full_url, timeout=30)
         elif method == "POST":
-            response = requests.post(full_url, json=data)
+            response = requests.post(full_url, json=data, timeout=30)
         elif method == "PUT":
-            response = requests.put(full_url, json=data)
+            response = requests.put(full_url, json=data, timeout=30)
         elif method == "DELETE":
-            response = requests.delete(full_url)
+            response = requests.delete(full_url, timeout=30)
         else:
             raise ValueError(f"Unsupported method: {method}")
         
@@ -97,8 +116,10 @@ def test_endpoint(name: str, method: str, url: str, expected_status: int = 200,
                 results.add_fail(name, str(e))
                 return
         
-        results.add_pass(name)
+        results.add_pass(name, response)
         
+    except requests.exceptions.Timeout:
+        results.add_fail(name, "Request timeout (30s)")
     except requests.exceptions.RequestException as e:
         results.add_fail(name, f"Request failed: {str(e)}")
     except Exception as e:
@@ -109,11 +130,12 @@ def test_endpoint(name: str, method: str, url: str, expected_status: int = 200,
 # ============================================================================
 
 def test_lab5():
-    print(f"\n{Fore.YELLOW}{'='*60}")
+    print(f"\n{Fore.YELLOW}{'='*70}")
     print("LAB 5 - Path Parameters, Query Parameters, Objects, Arrays")
-    print(f"{'='*60}{Style.RESET_ALL}\n")
+    print(f"{'='*70}{Style.RESET_ALL}\n")
     
     # Path Parameters
+    print(f"{Fore.CYAN}Testing Path Parameters...{Style.RESET_ALL}")
     test_endpoint("Lab5: Add 34 + 23", "GET", "/lab5/add/34/23",
                   check_response=lambda r: assert_equal(r.text, "57"))
     
@@ -127,6 +149,7 @@ def test_lab5():
                   check_response=lambda r: assert_contains(r.text, "1.4"))
     
     # Query Parameters
+    print(f"\n{Fore.CYAN}Testing Query Parameters...{Style.RESET_ALL}")
     test_endpoint("Lab5: Calculator Add", "GET", "/lab5/calculator?operation=add&a=34&b=23",
                   check_response=lambda r: assert_equal(r.text, "57"))
     
@@ -140,6 +163,7 @@ def test_lab5():
                   check_response=lambda r: assert_contains(r.text, "1.4"))
     
     # Working with Objects
+    print(f"\n{Fore.CYAN}Testing Working with Objects...{Style.RESET_ALL}")
     test_endpoint("Lab5: Get Assignment", "GET", "/lab5/assignment",
                   check_response=lambda r: assert_key_exists(r.json(), "title"))
     
@@ -156,11 +180,11 @@ def test_lab5():
                   check_response=lambda r: assert_is_string(r.json()))
     
     # Working with Arrays
+    print(f"\n{Fore.CYAN}Testing Working with Arrays...{Style.RESET_ALL}")
     test_endpoint("Lab5: Get All Todos", "GET", "/lab5/todos",
                   check_response=lambda r: assert_is_array(r.json()))
     
-    # Test with existing todo ID
-    test_endpoint("Lab5: Get Todo by ID (ID=1)", "GET", "/lab5/todos/1",
+    test_endpoint("Lab5: Get Todo by ID", "GET", "/lab5/todos/1",
                   check_response=lambda r: assert_key_exists(r.json(), "id"))
     
     test_endpoint("Lab5: Get Completed Todos", "GET", "/lab5/todos/completed/true",
@@ -172,8 +196,8 @@ def test_lab5():
                   data=new_todo,
                   check_response=lambda r: assert_key_exists(r.json(), "id"))
     
-    # Test Error Case - Todo Not Found
-    test_endpoint("Lab5: Get Todo by ID (Not Found)", "GET", "/lab5/todos/9999",
+    # Error Handling
+    test_endpoint("Lab5: Error - Todo Not Found", "GET", "/lab5/todos/9999",
                   expected_status=404,
                   check_response=lambda r: assert_key_exists(r.json(), "message"))
 
@@ -182,9 +206,9 @@ def test_lab5():
 # ============================================================================
 
 def test_users():
-    print(f"\n{Fore.YELLOW}{'='*60}")
+    print(f"\n{Fore.YELLOW}{'='*70}")
     print("KAMBAZ - Users & Authentication")
-    print(f"{'='*60}{Style.RESET_ALL}\n")
+    print(f"{'='*70}{Style.RESET_ALL}\n")
     
     test_endpoint("Users: Get All Users", "GET", "/api/users",
                   check_response=lambda r: assert_is_array(r.json()))
@@ -217,9 +241,9 @@ def test_users():
 # ============================================================================
 
 def test_courses():
-    print(f"\n{Fore.YELLOW}{'='*60}")
+    print(f"\n{Fore.YELLOW}{'='*70}")
     print("KAMBAZ - Courses")
-    print(f"{'='*60}{Style.RESET_ALL}\n")
+    print(f"{'='*70}{Style.RESET_ALL}\n")
     
     test_endpoint("Courses: Get All Courses", "GET", "/api/courses",
                   check_response=lambda r: assert_is_array(r.json()))
@@ -246,9 +270,9 @@ def test_courses():
 # ============================================================================
 
 def test_modules():
-    print(f"\n{Fore.YELLOW}{'='*60}")
+    print(f"\n{Fore.YELLOW}{'='*70}")
     print("KAMBAZ - Modules")
-    print(f"{'='*60}{Style.RESET_ALL}\n")
+    print(f"{'='*70}{Style.RESET_ALL}\n")
     
     test_endpoint("Modules: Get Modules for Course", "GET", "/api/courses/1234/modules",
                   check_response=lambda r: assert_is_array(r.json()))
@@ -267,9 +291,9 @@ def test_modules():
 # ============================================================================
 
 def test_assignments():
-    print(f"\n{Fore.YELLOW}{'='*60}")
+    print(f"\n{Fore.YELLOW}{'='*70}")
     print("KAMBAZ - Assignments")
-    print(f"{'='*60}{Style.RESET_ALL}\n")
+    print(f"{'='*70}{Style.RESET_ALL}\n")
     
     test_endpoint("Assignments: Get Assignments for Course", "GET", "/api/courses/1234/assignments",
                   check_response=lambda r: assert_is_array(r.json()))
@@ -290,9 +314,9 @@ def test_assignments():
 # ============================================================================
 
 def test_enrollments():
-    print(f"\n{Fore.YELLOW}{'='*60}")
+    print(f"\n{Fore.YELLOW}{'='*70}")
     print("KAMBAZ - Enrollments")
-    print(f"{'='*60}{Style.RESET_ALL}\n")
+    print(f"{'='*70}{Style.RESET_ALL}\n")
     
     test_endpoint("Enrollments: Get User Enrollments", "GET", "/api/users/121/enrollments",
                   check_response=lambda r: assert_is_array(r.json()))
@@ -331,19 +355,39 @@ def assert_key_exists(data: Dict, key: str):
 
 def run_all_tests():
     """Run all test suites"""
-    print(f"\n{Fore.CYAN}{'='*60}")
+    print(f"\n{Fore.CYAN}{'='*70}")
     print("KAMBAZ BACKEND API TEST SUITE")
     print("Assignment 5 - RESTful Web APIs")
-    print(f"{'='*60}{Style.RESET_ALL}")
-    print(f"Testing server at: {Fore.GREEN}{BASE_URL}{Style.RESET_ALL}\n")
+    print(f"{'='*70}{Style.RESET_ALL}")
+    print(f"Testing server at: {Fore.GREEN}{BASE_URL}{Style.RESET_ALL}")
+    
+    # Determine environment
+    if "localhost" in BASE_URL:
+        env = f"{Fore.YELLOW}LOCAL{Style.RESET_ALL}"
+    elif "onrender.com" in BASE_URL:
+        env = f"{Fore.BLUE}PRODUCTION (Render){Style.RESET_ALL}"
+    else:
+        env = f"{Fore.MAGENTA}CUSTOM{Style.RESET_ALL}"
+    
+    print(f"Environment: {env}\n")
     
     # Check if server is running
+    print(f"{Fore.CYAN}Checking server connection...{Style.RESET_ALL}")
     try:
-        response = requests.get(f"{BASE_URL}/hello")
-        print(f"{Fore.GREEN}✓ Server is running!{Style.RESET_ALL}\n")
-    except requests.exceptions.RequestException:
+        response = requests.get(f"{BASE_URL}/hello", timeout=30)
+        if response.status_code == 200:
+            print(f"{Fore.GREEN}✓ Server is online and responding!{Style.RESET_ALL}")
+            print(f"Response: {response.text}\n")
+        else:
+            print(f"{Fore.RED}✗ Server responded with status {response.status_code}{Style.RESET_ALL}\n")
+    except requests.exceptions.Timeout:
+        print(f"{Fore.RED}✗ ERROR: Server connection timeout (30s)")
+        print(f"The server might be starting up. Wait a few minutes and try again.{Style.RESET_ALL}\n")
+        return
+    except requests.exceptions.RequestException as e:
         print(f"{Fore.RED}✗ ERROR: Cannot connect to server at {BASE_URL}")
-        print(f"Make sure the Node.js server is running!{Style.RESET_ALL}\n")
+        print(f"Error: {str(e)}")
+        print(f"Make sure the server is running!{Style.RESET_ALL}\n")
         return
     
     # Run all test suites
@@ -357,5 +401,51 @@ def run_all_tests():
     # Print summary
     results.print_summary()
 
+def parse_arguments():
+    """Parse command line arguments"""
+    parser = argparse.ArgumentParser(
+        description='Test Kambaz Backend API',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog='''
+Examples:
+  # Test local server
+  python test_backend.py
+  
+  # Test production server on Render
+  python test_backend.py --url https://kambaz-node-server-app-a5.onrender.com
+  
+  # Verbose output
+  python test_backend.py --verbose
+  
+  # Test custom server
+  python test_backend.py --url http://192.168.1.100:4000
+        '''
+    )
+    
+    parser.add_argument(
+        '--url',
+        type=str,
+        default=DEFAULT_URL,
+        help=f'Base URL of the server (default: {DEFAULT_URL})'
+    )
+    
+    parser.add_argument(
+        '-v', '--verbose',
+        action='store_true',
+        help='Enable verbose output'
+    )
+    
+    return parser.parse_args()
+
 if __name__ == "__main__":
+    # Parse command line arguments
+    args = parse_arguments()
+    
+    # Set global BASE_URL
+    BASE_URL = args.url.rstrip('/')  # Remove trailing slash if present
+    
+    # Initialize results tracker
+    results = TestResult(verbose=args.verbose)
+    
+    # Run tests
     run_all_tests()
