@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "M1234_1",
+    "name": "Week 1",
+    "description": "Introduction to React",
+    "course": "1234",
+    "lessons": [
+      {
+        "_id": "L1234_101",
+        "name": "LEARNING OBJECTIVES",
+        "description": "Introduction to the course",
+        "module": "M1234_1"
+      },
+      {
+        "_id": "L1234_102",
+        "name": "Introduction to React",
+        "description": "Overview of React fundamentals",
+        "module": "M1234_1"
+      }
+    ]
+  },
+  {
+    "_id": "M1234_2",
+    "name": "Week 2",
+    "description": "State and Hooks",
+    "course": "1234",
+    "lessons": [
+      {
+        "_id": "L1234_201",
+        "name": "useState Hook",
+        "description": "Managing component state",
+        "module": "M1234_2"
+      }
+    ]
+  },
+  {
+    "_id": "M1235_1",
+    "name": "Week 1",
+    "description": "Next.js Fundamentals",
+    "course": "1235",
+    "lessons": [
+      {
+        "_id": "L1235_101",
+        "name": "Introduction to Next.js",
+        "description": "Getting started with Next.js",
+        "module": "M1235_1"
+      }
+    ]
+  }
+]

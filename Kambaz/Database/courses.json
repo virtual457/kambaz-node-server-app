@@ -1,0 +1,134 @@
+[
+  {
+    "_id": "1234",
+    "name": "CS1234 React JS",
+    "number": "CS1234",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D134",
+    "credits": 4,
+    "description": "Full Stack software developer",
+    "image": "/Images/reactjs.jpg"
+  },
+  {
+    "_id": "1235",
+    "name": "CS1235 Next.js",
+    "number": "CS1235",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D134",
+    "credits": 4,
+    "description": "Master Next.js - Server-Side Rendering, API Routes, and Deployment",
+    "image": "/Images/nextjs3.png"
+  },
+  {
+    "_id": "1236",
+    "name": "CS1236 JavaScript ES6+",
+    "number": "CS1236",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D134",
+    "credits": 3,
+    "description": "Deep dive into modern JavaScript - Async/Await, Promises, and Modules",
+    "image": "/Images/Javascript.jpeg"
+  },
+  {
+    "_id": "1237",
+    "name": "CS1237 Node.js",
+    "number": "CS1237",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D134",
+    "credits": 4,
+    "description": "Build scalable server applications with Node.js and Express",
+    "image": "/Images/Nodejs.jpeg"
+  },
+  {
+    "_id": "1238",
+    "name": "CS1238 TypeScript",
+    "number": "CS1238",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D134",
+    "credits": 3,
+    "description": "Learn TypeScript - Static typing, interfaces, and advanced features",
+    "image": "/Images/typescript.png"
+  },
+  {
+    "_id": "1239",
+    "name": "CS1239 MongoDB",
+    "number": "CS1239",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D134",
+    "credits": 4,
+    "description": "Master MongoDB - Document databases, queries, and data modeling",
+    "image": "/Images/Mongodb.jpeg"
+  },
+  {
+    "_id": "1240",
+    "name": "CS1240 CSS3",
+    "number": "CS1240",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D134",
+    "credits": 3,
+    "description": "Master CSS3 - Flexbox, Grid, animations, and responsive design",
+    "image": "/Images/css.png"
+  },
+  {
+    "_id": "1241",
+    "name": "CS1241 Git & GitHub",
+    "number": "CS1241",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D134",
+    "credits": 2,
+    "description": "Learn version control - Git workflows, branching, and collaboration",
+    "image": "/Images/git.png"
+  },
+  {
+    "_id": "1242",
+    "name": "CS1242 Docker",
+    "number": "CS1242",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D134",
+    "credits": 3,
+    "description": "Containerize applications - Docker, Kubernetes, and deployment",
+    "image": "/Images/docker.png"
+  },
+  {
+    "_id": "1243",
+    "name": "CS1243 AWS Cloud",
+    "number": "CS1243",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D134",
+    "credits": 4,
+    "description": "Deploy to the cloud - EC2, S3, Lambda, and cloud architecture",
+    "image": "/Images/aws.png"
+  },
+  {
+    "_id": "1244",
+    "name": "CS1244 GraphQL",
+    "number": "CS1244",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D134",
+    "credits": 3,
+    "description": "Build efficient APIs - GraphQL schemas, resolvers, and subscriptions",
+    "image": "/Images/graphql.png"
+  },
+  {
+    "_id": "1245",
+    "name": "CS1245 Testing & QA",
+    "number": "CS1245",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D134",
+    "credits": 3,
+    "description": "Master testing - Jest, Cypress, unit tests, and test automation",
+    "image": "/Images/testing and Qa.jpeg"
+  }
+]

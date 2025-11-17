@@ -1,0 +1,42 @@
+[
+  {
+    "_id": "A101",
+    "title": "A1 - ENV + HTML",
+    "course": "1234",
+    "description": "Create a Node.js development environment and basic HTML pages",
+    "points": 100,
+    "dueDate": "2024-05-13T23:59:00",
+    "availableFromDate": "2024-05-06T00:00:00",
+    "availableUntilDate": "2024-05-20T23:59:00"
+  },
+  {
+    "_id": "A102",
+    "title": "A2 - CSS + BOOTSTRAP",
+    "course": "1234",
+    "description": "Style web pages with CSS and Bootstrap framework",
+    "points": 100,
+    "dueDate": "2024-05-20T23:59:00",
+    "availableFromDate": "2024-05-13T00:00:00",
+    "availableUntilDate": "2024-05-27T23:59:00"
+  },
+  {
+    "_id": "A103",
+    "title": "A3 - JAVASCRIPT + REACT",
+    "course": "1234",
+    "description": "Create interactive web applications using JavaScript and React",
+    "points": 100,
+    "dueDate": "2024-05-27T23:59:00",
+    "availableFromDate": "2024-05-20T00:00:00",
+    "availableUntilDate": "2024-06-03T23:59:00"
+  },
+  {
+    "_id": "A201",
+    "title": "A1 - Next.js Setup",
+    "course": "1235",
+    "description": "Build your first Next.js application with routing",
+    "points": 100,
+    "dueDate": "2024-05-13T23:59:00",
+    "availableFromDate": "2024-05-06T00:00:00",
+    "availableUntilDate": "2024-05-20T23:59:00"
+  }
+]
