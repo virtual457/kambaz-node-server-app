@@ -20,13 +20,49 @@
     <a href="https://github.com/virtual457/kambaz-node-server-app"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://kambaz-node-server-app-irwy.onrender.com">View Demo</a>
+    <a href="https://kambaz-node-server-app-irwy.onrender.com/hello">View Live API</a>
     ·
-    <a href="https://github.com/virtual457/kambaz-node-server-app/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://kambaz-next-js-git-a5-chandan-gowda-k-ss-projects.vercel.app">View Frontend Demo</a>
     ·
-    <a href="https://github.com/virtual457/kambaz-node-server-app/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/virtual457/kambaz-node-server-app/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/virtual457/kambaz-node-server-app/issues">Request Feature</a>
   </p>
 </div>
+
+<!-- LIVE DEMO SECTION -->
+## 🚀 Live Demo
+
+<div align="center">
+
+### **Backend API (Render)**
+[![API Status](https://img.shields.io/website?url=https%3A%2F%2Fkambaz-node-server-app-irwy.onrender.com%2Fhello&style=for-the-badge&label=API%20STATUS)](https://kambaz-node-server-app-irwy.onrender.com/hello)
+
+**Base URL:** [https://kambaz-node-server-app-irwy.onrender.com](https://kambaz-node-server-app-irwy.onrender.com)
+
+Try these live endpoints:
+- [Health Check](https://kambaz-node-server-app-irwy.onrender.com/hello) - Test server status
+- [All Courses](https://kambaz-node-server-app-irwy.onrender.com/api/courses) - View course catalog
+- [All Users](https://kambaz-node-server-app-irwy.onrender.com/api/users) - View user list
+- [Calculator Demo](https://kambaz-node-server-app-irwy.onrender.com/lab5/calculator?operation=add&a=34&b=23) - Math operations
+
+### **Frontend Application (Vercel)**
+[![Deployment Status](https://img.shields.io/badge/Vercel-Deployed-brightgreen?style=for-the-badge&logo=vercel)](https://kambaz-next-js-git-a5-chandan-gowda-k-ss-projects.vercel.app)
+
+**Live App:** [https://kambaz-next-js-git-a5-chandan-gowda-k-ss-projects.vercel.app](https://kambaz-next-js-git-a5-chandan-gowda-k-ss-projects.vercel.app)
+
+### **Architecture**
+```
+┌─────────────────────┐      HTTPS/REST      ┌──────────────────────┐
+│   Next.js Frontend  │ ←─────────────────→  │   Node.js Backend    │
+│   (Vercel)          │      API Calls       │   (Render)           │
+│   Port: 3000        │                      │   Port: 4000         │
+└─────────────────────┘                      └──────────────────────┘
+```
+
+</div>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -180,6 +216,26 @@ Learning Management Systems are complex applications requiring careful handling 
 ```
 Development: http://localhost:4000
 Production: https://kambaz-node-server-app-irwy.onrender.com
+```
+
+### Quick Start Examples
+
+#### Test Health Endpoint
+```bash
+curl https://kambaz-node-server-app-irwy.onrender.com/hello
+# Response: "Life is good!"
+```
+
+#### Get All Courses
+```bash
+curl https://kambaz-node-server-app-irwy.onrender.com/api/courses
+```
+
+#### Sign In
+```bash
+curl -X POST https://kambaz-node-server-app-irwy.onrender.com/api/users/signin \
+  -H "Content-Type: application/json" \
+  -d '{"username":"iron_man","password":"stark123"}'
 ```
 
 ### Authentication Endpoints
@@ -476,21 +532,21 @@ python test_backend.py --verbose
 #### Using cURL
 ```bash
 # Health check
-curl http://localhost:4000/hello
+curl https://kambaz-node-server-app-irwy.onrender.com/hello
 
 # Get all courses
-curl http://localhost:4000/api/courses
+curl https://kambaz-node-server-app-irwy.onrender.com/api/courses
 
 # Create course
-curl -X POST http://localhost:4000/api/courses \
+curl -X POST https://kambaz-node-server-app-irwy.onrender.com/api/courses \
   -H "Content-Type: application/json" \
   -d '{"name":"Test Course","number":"TEST101","credits":3}'
 ```
 
 #### Using Browser
 Navigate to:
-- `http://localhost:4000/api/courses` - View all courses
-- `http://localhost:4000/api/users` - View all users
+- [View All Courses](https://kambaz-node-server-app-irwy.onrender.com/api/courses)
+- [View All Users](https://kambaz-node-server-app-irwy.onrender.com/api/users)
 
 #### Using API Testing Tools
 Import endpoints into Postman, Insomnia, or Thunder Client for comprehensive testing.
@@ -502,7 +558,7 @@ Import endpoints into Postman, Insomnia, or Thunder Client for comprehensive tes
 
 ### Production Deployment on Render
 
-**Live API:** https://kambaz-node-server-app-irwy.onrender.com
+**Live API:** [https://kambaz-node-server-app-irwy.onrender.com](https://kambaz-node-server-app-irwy.onrender.com)
 
 #### Deploy Your Own Instance
 
@@ -622,7 +678,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 **Project Links:**
 - Backend API: [https://github.com/virtual457/kambaz-node-server-app](https://github.com/virtual457/kambaz-node-server-app)
 - Frontend App: [https://github.com/virtual457/kambaz-next-js](https://github.com/virtual457/kambaz-next-js)
-- Live Demo: [https://kambaz-node-server-app-irwy.onrender.com](https://kambaz-node-server-app-irwy.onrender.com)
+- Live Backend: [https://kambaz-node-server-app-irwy.onrender.com](https://kambaz-node-server-app-irwy.onrender.com)
+- Live Frontend: [https://kambaz-next-js-git-a5-chandan-gowda-k-ss-projects.vercel.app](https://kambaz-next-js-git-a5-chandan-gowda-k-ss-projects.vercel.app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
