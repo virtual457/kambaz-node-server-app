@@ -8,13 +8,20 @@
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
-  "keywords": ["node", "express", "rest", "api"],
+  "keywords": [
+    "node",
+    "express",
+    "rest",
+    "api"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.21.2",
     "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "express-session": "^1.18.2",
+    "mongoose": "^9.0.0",
     "uuid": "^11.0.4"
   },
   "devDependencies": {

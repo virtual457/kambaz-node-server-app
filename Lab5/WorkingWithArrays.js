@@ -6,8 +6,19 @@ let todos = [
 ];
 
 export default function WorkingWithArrays(app) {
-  // Get all todos
+  // Get all todos OR filter by completed status using query parameter
   app.get('/lab5/todos', (req, res) => {
+    const { completed } = req.query;
+    
+    // If completed query param is provided, filter the array
+    if (completed !== undefined) {
+      const completedBool = completed === 'true';
+      const completedTodos = todos.filter((t) => t.completed === completedBool);
+      res.json(completedTodos);
+      return;
+    }
+    
+    // Otherwise return all todos
     res.json(todos);
   });
 
@@ -22,7 +33,7 @@ export default function WorkingWithArrays(app) {
     }
   });
 
-  // Get completed todos
+  // DEPRECATED: Old path parameter approach (keeping for backwards compatibility)
   app.get('/lab5/todos/completed/:completed', (req, res) => {
     const { completed } = req.params;
     const completedTodos = todos.filter(

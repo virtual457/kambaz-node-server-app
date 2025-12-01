@@ -1,0 +1,362 @@
+[
+  {
+    "_id": "A101",
+    "title": "A1 - Propeller Design",
+    "course": "1234",
+    "description": "Design JSON Schemas and React Components",
+    "points": 100,
+    "dueDate": "2024-05-13T23:59:00",
+    "availableFromDate": "2024-05-06T00:00:00",
+    "availableUntilDate": "2024-05-20T23:59:00"
+  },
+  {
+    "_id": "A102",
+    "title": "A2 - Combustion Analysis",
+    "course": "1234",
+    "description": "Analyze combustion efficiency and output",
+    "points": 100,
+    "dueDate": "2024-05-20T23:59:00",
+    "availableFromDate": "2024-05-13T00:00:00",
+    "availableUntilDate": "2024-05-27T23:59:00"
+  },
+  {
+    "_id": "A103",
+    "title": "A3 - Nozzle Design Project",
+    "course": "1234",
+    "description": "Design and optimize a rocket nozzle",
+    "points": 100,
+    "dueDate": "2024-05-27T23:59:00",
+    "availableFromDate": "2024-05-20T00:00:00",
+    "availableUntilDate": "2024-06-03T23:59:00"
+  },
+  {
+    "_id": "A201",
+    "title": "A1 - Next.js Setup",
+    "course": "1235",
+    "description": "Create a Next.js project with SSR",
+    "points": 100,
+    "dueDate": "2024-05-13T23:59:00",
+    "availableFromDate": "2024-05-06T00:00:00",
+    "availableUntilDate": "2024-05-20T23:59:00"
+  },
+  {
+    "_id": "A202",
+    "title": "A2 - API Routes",
+    "course": "1235",
+    "description": "Build RESTful API routes in Next.js",
+    "points": 100,
+    "dueDate": "2024-05-20T23:59:00",
+    "availableFromDate": "2024-05-13T00:00:00",
+    "availableUntilDate": "2024-05-27T23:59:00"
+  },
+  {
+    "_id": "A203",
+    "title": "A3 - Full Stack App",
+    "course": "1235",
+    "description": "Deploy a full-stack Next.js application",
+    "points": 100,
+    "dueDate": "2024-05-27T23:59:00",
+    "availableFromDate": "2024-05-20T00:00:00",
+    "availableUntilDate": "2024-06-03T23:59:00"
+  },
+  {
+    "_id": "A301",
+    "title": "A1 - ES6+ Features",
+    "course": "1236",
+    "description": "Implement arrow functions, destructuring, and spread operator",
+    "points": 100,
+    "dueDate": "2024-05-13T23:59:00",
+    "availableFromDate": "2024-05-06T00:00:00",
+    "availableUntilDate": "2024-05-20T23:59:00"
+  },
+  {
+    "_id": "A302",
+    "title": "A2 - Promises and Async",
+    "course": "1236",
+    "description": "Build async applications with Promises and async/await",
+    "points": 100,
+    "dueDate": "2024-05-20T23:59:00",
+    "availableFromDate": "2024-05-13T00:00:00",
+    "availableUntilDate": "2024-05-27T23:59:00"
+  },
+  {
+    "_id": "A303",
+    "title": "A3 - Module System",
+    "course": "1236",
+    "description": "Create modular JavaScript applications",
+    "points": 100,
+    "dueDate": "2024-05-27T23:59:00",
+    "availableFromDate": "2024-05-20T00:00:00",
+    "availableUntilDate": "2024-06-03T23:59:00"
+  },
+  {
+    "_id": "A401",
+    "title": "A1 - HTTP Server",
+    "course": "1237",
+    "description": "Build a basic Node.js HTTP server",
+    "points": 100,
+    "dueDate": "2024-05-13T23:59:00",
+    "availableFromDate": "2024-05-06T00:00:00",
+    "availableUntilDate": "2024-05-20T23:59:00"
+  },
+  {
+    "_id": "A402",
+    "title": "A2 - Express Middleware",
+    "course": "1237",
+    "description": "Create custom Express middleware",
+    "points": 100,
+    "dueDate": "2024-05-20T23:59:00",
+    "availableFromDate": "2024-05-13T00:00:00",
+    "availableUntilDate": "2024-05-27T23:59:00"
+  },
+  {
+    "_id": "A403",
+    "title": "A3 - RESTful API",
+    "course": "1237",
+    "description": "Build a complete RESTful API with Express",
+    "points": 100,
+    "dueDate": "2024-05-27T23:59:00",
+    "availableFromDate": "2024-05-20T00:00:00",
+    "availableUntilDate": "2024-06-03T23:59:00"
+  },
+  {
+    "_id": "A501",
+    "title": "A1 - Type Annotations",
+    "course": "1238",
+    "description": "Add type annotations to JavaScript code",
+    "points": 100,
+    "dueDate": "2024-05-13T23:59:00",
+    "availableFromDate": "2024-05-06T00:00:00",
+    "availableUntilDate": "2024-05-20T23:59:00"
+  },
+  {
+    "_id": "A502",
+    "title": "A2 - Interfaces and Types",
+    "course": "1238",
+    "description": "Define complex types and interfaces",
+    "points": 100,
+    "dueDate": "2024-05-20T23:59:00",
+    "availableFromDate": "2024-05-13T00:00:00",
+    "availableUntilDate": "2024-05-27T23:59:00"
+  },
+  {
+    "_id": "A503",
+    "title": "A3 - Generics Project",
+    "course": "1238",
+    "description": "Build reusable components with generics",
+    "points": 100,
+    "dueDate": "2024-05-27T23:59:00",
+    "availableFromDate": "2024-05-20T00:00:00",
+    "availableUntilDate": "2024-06-03T23:59:00"
+  },
+  {
+    "_id": "A601",
+    "title": "A1 - CRUD Operations",
+    "course": "1239",
+    "description": "Implement basic MongoDB CRUD operations",
+    "points": 100,
+    "dueDate": "2024-05-13T23:59:00",
+    "availableFromDate": "2024-05-06T00:00:00",
+    "availableUntilDate": "2024-05-20T23:59:00"
+  },
+  {
+    "_id": "A602",
+    "title": "A2 - Mongoose Schemas",
+    "course": "1239",
+    "description": "Design and implement Mongoose schemas",
+    "points": 100,
+    "dueDate": "2024-05-20T23:59:00",
+    "availableFromDate": "2024-05-13T00:00:00",
+    "availableUntilDate": "2024-05-27T23:59:00"
+  },
+  {
+    "_id": "A603",
+    "title": "A3 - Data Modeling",
+    "course": "1239",
+    "description": "Model complex relationships in MongoDB",
+    "points": 100,
+    "dueDate": "2024-05-27T23:59:00",
+    "availableFromDate": "2024-05-20T00:00:00",
+    "availableUntilDate": "2024-06-03T23:59:00"
+  },
+  {
+    "_id": "A701",
+    "title": "A1 - CSS Selectors",
+    "course": "1240",
+    "description": "Master CSS selectors and specificity",
+    "points": 100,
+    "dueDate": "2024-05-13T23:59:00",
+    "availableFromDate": "2024-05-06T00:00:00",
+    "availableUntilDate": "2024-05-20T23:59:00"
+  },
+  {
+    "_id": "A702",
+    "title": "A2 - Flexbox Layout",
+    "course": "1240",
+    "description": "Build responsive layouts with Flexbox",
+    "points": 100,
+    "dueDate": "2024-05-20T23:59:00",
+    "availableFromDate": "2024-05-13T00:00:00",
+    "availableUntilDate": "2024-05-27T23:59:00"
+  },
+  {
+    "_id": "A703",
+    "title": "A3 - CSS Grid Project",
+    "course": "1240",
+    "description": "Create complex layouts using CSS Grid",
+    "points": 100,
+    "dueDate": "2024-05-27T23:59:00",
+    "availableFromDate": "2024-05-20T00:00:00",
+    "availableUntilDate": "2024-06-03T23:59:00"
+  },
+  {
+    "_id": "A801",
+    "title": "A1 - Git Basics",
+    "course": "1241",
+    "description": "Learn basic git commands and workflows",
+    "points": 100,
+    "dueDate": "2024-05-13T23:59:00",
+    "availableFromDate": "2024-05-06T00:00:00",
+    "availableUntilDate": "2024-05-20T23:59:00"
+  },
+  {
+    "_id": "A802",
+    "title": "A2 - Branching Strategy",
+    "course": "1241",
+    "description": "Implement Git branching and merging",
+    "points": 100,
+    "dueDate": "2024-05-20T23:59:00",
+    "availableFromDate": "2024-05-13T00:00:00",
+    "availableUntilDate": "2024-05-27T23:59:00"
+  },
+  {
+    "_id": "A803",
+    "title": "A3 - Collaboration Project",
+    "course": "1241",
+    "description": "Collaborate on GitHub with pull requests",
+    "points": 100,
+    "dueDate": "2024-05-27T23:59:00",
+    "availableFromDate": "2024-05-20T00:00:00",
+    "availableUntilDate": "2024-06-03T23:59:00"
+  },
+  {
+    "_id": "A901",
+    "title": "A1 - Docker Setup",
+    "course": "1242",
+    "description": "Create and run your first Docker container",
+    "points": 100,
+    "dueDate": "2024-05-13T23:59:00",
+    "availableFromDate": "2024-05-06T00:00:00",
+    "availableUntilDate": "2024-05-20T23:59:00"
+  },
+  {
+    "_id": "A902",
+    "title": "A2 - Dockerfile Creation",
+    "course": "1242",
+    "description": "Write Dockerfiles for Node.js applications",
+    "points": 100,
+    "dueDate": "2024-05-20T23:59:00",
+    "availableFromDate": "2024-05-13T00:00:00",
+    "availableUntilDate": "2024-05-27T23:59:00"
+  },
+  {
+    "_id": "A903",
+    "title": "A3 - Docker Compose",
+    "course": "1242",
+    "description": "Orchestrate multi-container applications",
+    "points": 100,
+    "dueDate": "2024-05-27T23:59:00",
+    "availableFromDate": "2024-05-20T00:00:00",
+    "availableUntilDate": "2024-06-03T23:59:00"
+  },
+  {
+    "_id": "A1001",
+    "title": "A1 - EC2 Instance",
+    "course": "1243",
+    "description": "Launch and configure an EC2 instance",
+    "points": 100,
+    "dueDate": "2024-05-13T23:59:00",
+    "availableFromDate": "2024-05-06T00:00:00",
+    "availableUntilDate": "2024-05-20T23:59:00"
+  },
+  {
+    "_id": "A1002",
+    "title": "A2 - S3 Storage",
+    "course": "1243",
+    "description": "Store and retrieve files from S3",
+    "points": 100,
+    "dueDate": "2024-05-20T23:59:00",
+    "availableFromDate": "2024-05-13T00:00:00",
+    "availableUntilDate": "2024-05-27T23:59:00"
+  },
+  {
+    "_id": "A1003",
+    "title": "A3 - Lambda Function",
+    "course": "1243",
+    "description": "Build serverless functions with Lambda",
+    "points": 100,
+    "dueDate": "2024-05-27T23:59:00",
+    "availableFromDate": "2024-05-20T00:00:00",
+    "availableUntilDate": "2024-06-03T23:59:00"
+  },
+  {
+    "_id": "A1101",
+    "title": "A1 - GraphQL Schema",
+    "course": "1244",
+    "description": "Define a GraphQL schema",
+    "points": 100,
+    "dueDate": "2024-05-13T23:59:00",
+    "availableFromDate": "2024-05-06T00:00:00",
+    "availableUntilDate": "2024-05-20T23:59:00"
+  },
+  {
+    "_id": "A1102",
+    "title": "A2 - Resolvers",
+    "course": "1244",
+    "description": "Implement GraphQL resolvers",
+    "points": 100,
+    "dueDate": "2024-05-20T23:59:00",
+    "availableFromDate": "2024-05-13T00:00:00",
+    "availableUntilDate": "2024-05-27T23:59:00"
+  },
+  {
+    "_id": "A1103",
+    "title": "A3 - GraphQL API",
+    "course": "1244",
+    "description": "Build a complete GraphQL API",
+    "points": 100,
+    "dueDate": "2024-05-27T23:59:00",
+    "availableFromDate": "2024-05-20T00:00:00",
+    "availableUntilDate": "2024-06-03T23:59:00"
+  },
+  {
+    "_id": "A1201",
+    "title": "A1 - Unit Tests",
+    "course": "1245",
+    "description": "Write unit tests with Jest",
+    "points": 100,
+    "dueDate": "2024-05-13T23:59:00",
+    "availableFromDate": "2024-05-06T00:00:00",
+    "availableUntilDate": "2024-05-20T23:59:00"
+  },
+  {
+    "_id": "A1202",
+    "title": "A2 - Integration Tests",
+    "course": "1245",
+    "description": "Test API endpoints and integrations",
+    "points": 100,
+    "dueDate": "2024-05-20T23:59:00",
+    "availableFromDate": "2024-05-13T00:00:00",
+    "availableUntilDate": "2024-05-27T23:59:00"
+  },
+  {
+    "_id": "A1203",
+    "title": "A3 - E2E Tests",
+    "course": "1245",
+    "description": "Automate browser testing with Cypress",
+    "points": 100,
+    "dueDate": "2024-05-27T23:59:00",
+    "availableFromDate": "2024-05-20T00:00:00",
+    "availableUntilDate": "2024-06-03T23:59:00"
+  }
+]

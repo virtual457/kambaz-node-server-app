@@ -1,0 +1,602 @@
+[
+  {
+    "_id": "1234",
+    "name": "CS1234 React JS",
+    "number": "CS1234",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D134",
+    "credits": 4,
+    "description": "Full Stack software developer",
+    "image": "/Images/reactjs.jpg",
+    "modules": [
+      {
+        "_id": "M1234_1",
+        "name": "Week 1",
+        "description": "Introduction to React",
+        "lessons": [
+          {
+            "_id": "L1234_101",
+            "name": "LEARNING OBJECTIVES",
+            "description": "Introduction to the course",
+            "module": "M1234_1"
+          },
+          {
+            "_id": "L1234_102",
+            "name": "Introduction to React",
+            "description": "Overview of React fundamentals",
+            "module": "M1234_1"
+          }
+        ]
+      },
+      {
+        "_id": "M1234_2",
+        "name": "Week 2",
+        "description": "State and Hooks",
+        "lessons": [
+          {
+            "_id": "L1234_201",
+            "name": "useState Hook",
+            "description": "Managing component state",
+            "module": "M1234_2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "1235",
+    "name": "CS1235 Next.js",
+    "number": "CS1235",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D134",
+    "credits": 4,
+    "description": "Master Next.js - Server-Side Rendering, API Routes, and Deployment",
+    "image": "/Images/nextjs3.png",
+    "modules": [
+      {
+        "_id": "M1235_1",
+        "name": "Week 1",
+        "description": "Next.js Fundamentals",
+        "lessons": [
+          {
+            "_id": "L1235_101",
+            "name": "Introduction to Next.js",
+            "description": "Getting started with Next.js",
+            "module": "M1235_1"
+          },
+          {
+            "_id": "L1235_102",
+            "name": "Pages and Routing",
+            "description": "Understanding Next.js routing",
+            "module": "M1235_1"
+          }
+        ]
+      },
+      {
+        "_id": "M1235_2",
+        "name": "Week 2",
+        "description": "Server-Side Rendering",
+        "lessons": [
+          {
+            "_id": "L1235_201",
+            "name": "SSR Basics",
+            "description": "Introduction to server-side rendering",
+            "module": "M1235_2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "1236",
+    "name": "CS1236 JavaScript ES6+",
+    "number": "CS1236",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D134",
+    "credits": 3,
+    "description": "Deep dive into modern JavaScript - Async/Await, Promises, and Modules",
+    "image": "/Images/Javascript.jpeg",
+    "modules": [
+      {
+        "_id": "M1236_1",
+        "name": "Week 1",
+        "description": "Modern JavaScript Basics",
+        "lessons": [
+          {
+            "_id": "L1236_101",
+            "name": "ES6+ Features",
+            "description": "Arrow functions, destructuring, spread operator",
+            "module": "M1236_1"
+          },
+          {
+            "_id": "L1236_102",
+            "name": "let and const",
+            "description": "Modern variable declarations",
+            "module": "M1236_1"
+          }
+        ]
+      },
+      {
+        "_id": "M1236_2",
+        "name": "Week 2",
+        "description": "Asynchronous JavaScript",
+        "lessons": [
+          {
+            "_id": "L1236_201",
+            "name": "Promises",
+            "description": "Understanding JavaScript promises",
+            "module": "M1236_2"
+          },
+          {
+            "_id": "L1236_202",
+            "name": "Async/Await",
+            "description": "Modern asynchronous programming",
+            "module": "M1236_2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "1237",
+    "name": "CS1237 Node.js",
+    "number": "CS1237",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D134",
+    "credits": 4,
+    "description": "Build scalable server applications with Node.js and Express",
+    "image": "/Images/Nodejs.jpeg",
+    "modules": [
+      {
+        "_id": "M1237_1",
+        "name": "Week 1",
+        "description": "Introduction to Node.js",
+        "lessons": [
+          {
+            "_id": "L1237_101",
+            "name": "Node.js Basics",
+            "description": "Understanding Node.js runtime",
+            "module": "M1237_1"
+          },
+          {
+            "_id": "L1237_102",
+            "name": "npm and Modules",
+            "description": "Package management and module system",
+            "module": "M1237_1"
+          }
+        ]
+      },
+      {
+        "_id": "M1237_2",
+        "name": "Week 2",
+        "description": "Express Framework",
+        "lessons": [
+          {
+            "_id": "L1237_201",
+            "name": "Express Basics",
+            "description": "Building web servers with Express",
+            "module": "M1237_2"
+          },
+          {
+            "_id": "L1237_202",
+            "name": "REST APIs",
+            "description": "Creating RESTful web services",
+            "module": "M1237_2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "1238",
+    "name": "CS1238 TypeScript",
+    "number": "CS1238",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D134",
+    "credits": 3,
+    "description": "Learn TypeScript - Static typing, interfaces, and advanced features",
+    "image": "/Images/typescript.png",
+    "modules": [
+      {
+        "_id": "M1238_1",
+        "name": "Week 1",
+        "description": "TypeScript Fundamentals",
+        "lessons": [
+          {
+            "_id": "L1238_101",
+            "name": "Type Annotations",
+            "description": "Basic types and annotations",
+            "module": "M1238_1"
+          },
+          {
+            "_id": "L1238_102",
+            "name": "Interfaces",
+            "description": "Defining object shapes",
+            "module": "M1238_1"
+          }
+        ]
+      },
+      {
+        "_id": "M1238_2",
+        "name": "Week 2",
+        "description": "Advanced TypeScript",
+        "lessons": [
+          {
+            "_id": "L1238_201",
+            "name": "Generics",
+            "description": "Writing reusable code with generics",
+            "module": "M1238_2"
+          },
+          {
+            "_id": "L1238_202",
+            "name": "Type Guards",
+            "description": "Runtime type checking",
+            "module": "M1238_2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "1239",
+    "name": "CS1239 MongoDB",
+    "number": "CS1239",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D134",
+    "credits": 4,
+    "description": "Master MongoDB - Document databases, queries, and data modeling",
+    "image": "/Images/Mongodb.jpeg",
+    "modules": [
+      {
+        "_id": "M1239_1",
+        "name": "Week 1",
+        "description": "Introduction to MongoDB",
+        "lessons": [
+          {
+            "_id": "L1239_101",
+            "name": "NoSQL Concepts",
+            "description": "Understanding document databases",
+            "module": "M1239_1"
+          },
+          {
+            "_id": "L1239_102",
+            "name": "CRUD Operations",
+            "description": "Basic database operations",
+            "module": "M1239_1"
+          }
+        ]
+      },
+      {
+        "_id": "M1239_2",
+        "name": "Week 2",
+        "description": "Mongoose and Schema Design",
+        "lessons": [
+          {
+            "_id": "L1239_201",
+            "name": "Mongoose Basics",
+            "description": "ODM for MongoDB",
+            "module": "M1239_2"
+          },
+          {
+            "_id": "L1239_202",
+            "name": "Data Modeling",
+            "description": "Designing schemas and relationships",
+            "module": "M1239_2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "1240",
+    "name": "CS1240 CSS3",
+    "number": "CS1240",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D134",
+    "credits": 3,
+    "description": "Master CSS3 - Flexbox, Grid, animations, and responsive design",
+    "image": "/Images/css.png",
+    "modules": [
+      {
+        "_id": "M1240_1",
+        "name": "Week 1",
+        "description": "CSS Fundamentals",
+        "lessons": [
+          {
+            "_id": "L1240_101",
+            "name": "Selectors and Properties",
+            "description": "CSS syntax and basic styling",
+            "module": "M1240_1"
+          },
+          {
+            "_id": "L1240_102",
+            "name": "Box Model",
+            "description": "Understanding layout fundamentals",
+            "module": "M1240_1"
+          }
+        ]
+      },
+      {
+        "_id": "M1240_2",
+        "name": "Week 2",
+        "description": "Modern CSS Layouts",
+        "lessons": [
+          {
+            "_id": "L1240_201",
+            "name": "Flexbox",
+            "description": "Flexible box layout",
+            "module": "M1240_2"
+          },
+          {
+            "_id": "L1240_202",
+            "name": "CSS Grid",
+            "description": "Two-dimensional layouts",
+            "module": "M1240_2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "1241",
+    "name": "CS1241 Git & GitHub",
+    "number": "CS1241",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D134",
+    "credits": 2,
+    "description": "Learn version control - Git workflows, branching, and collaboration",
+    "image": "/Images/git.png",
+    "modules": [
+      {
+        "_id": "M1241_1",
+        "name": "Week 1",
+        "description": "Git Basics",
+        "lessons": [
+          {
+            "_id": "L1241_101",
+            "name": "Version Control Concepts",
+            "description": "Understanding version control",
+            "module": "M1241_1"
+          },
+          {
+            "_id": "L1241_102",
+            "name": "Git Commands",
+            "description": "Basic git operations",
+            "module": "M1241_1"
+          }
+        ]
+      },
+      {
+        "_id": "M1241_2",
+        "name": "Week 2",
+        "description": "GitHub Collaboration",
+        "lessons": [
+          {
+            "_id": "L1241_201",
+            "name": "Branching and Merging",
+            "description": "Working with branches",
+            "module": "M1241_2"
+          },
+          {
+            "_id": "L1241_202",
+            "name": "Pull Requests",
+            "description": "Collaborative workflows",
+            "module": "M1241_2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "1242",
+    "name": "CS1242 Docker",
+    "number": "CS1242",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D134",
+    "credits": 3,
+    "description": "Containerize applications - Docker, Kubernetes, and deployment",
+    "image": "/Images/docker.png",
+    "modules": [
+      {
+        "_id": "M1242_1",
+        "name": "Week 1",
+        "description": "Docker Fundamentals",
+        "lessons": [
+          {
+            "_id": "L1242_101",
+            "name": "Containerization Basics",
+            "description": "Understanding containers",
+            "module": "M1242_1"
+          },
+          {
+            "_id": "L1242_102",
+            "name": "Docker Images",
+            "description": "Creating and managing images",
+            "module": "M1242_1"
+          }
+        ]
+      },
+      {
+        "_id": "M1242_2",
+        "name": "Week 2",
+        "description": "Docker Compose and Orchestration",
+        "lessons": [
+          {
+            "_id": "L1242_201",
+            "name": "Docker Compose",
+            "description": "Multi-container applications",
+            "module": "M1242_2"
+          },
+          {
+            "_id": "L1242_202",
+            "name": "Kubernetes Intro",
+            "description": "Container orchestration basics",
+            "module": "M1242_2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "1243",
+    "name": "CS1243 AWS Cloud",
+    "number": "CS1243",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D134",
+    "credits": 4,
+    "description": "Deploy to the cloud - EC2, S3, Lambda, and cloud architecture",
+    "image": "/Images/aws.png",
+    "modules": [
+      {
+        "_id": "M1243_1",
+        "name": "Week 1",
+        "description": "AWS Fundamentals",
+        "lessons": [
+          {
+            "_id": "L1243_101",
+            "name": "Cloud Computing Basics",
+            "description": "Understanding cloud services",
+            "module": "M1243_1"
+          },
+          {
+            "_id": "L1243_102",
+            "name": "EC2 Instances",
+            "description": "Virtual servers in the cloud",
+            "module": "M1243_1"
+          }
+        ]
+      },
+      {
+        "_id": "M1243_2",
+        "name": "Week 2",
+        "description": "AWS Services",
+        "lessons": [
+          {
+            "_id": "L1243_201",
+            "name": "S3 Storage",
+            "description": "Object storage service",
+            "module": "M1243_2"
+          },
+          {
+            "_id": "L1243_202",
+            "name": "Lambda Functions",
+            "description": "Serverless computing",
+            "module": "M1243_2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "1244",
+    "name": "CS1244 GraphQL",
+    "number": "CS1244",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D134",
+    "credits": 3,
+    "description": "Build efficient APIs - GraphQL schemas, resolvers, and subscriptions",
+    "image": "/Images/graphql.png",
+    "modules": [
+      {
+        "_id": "M1244_1",
+        "name": "Week 1",
+        "description": "GraphQL Basics",
+        "lessons": [
+          {
+            "_id": "L1244_101",
+            "name": "GraphQL vs REST",
+            "description": "Understanding GraphQL benefits",
+            "module": "M1244_1"
+          },
+          {
+            "_id": "L1244_102",
+            "name": "Queries and Mutations",
+            "description": "Reading and writing data",
+            "module": "M1244_1"
+          }
+        ]
+      },
+      {
+        "_id": "M1244_2",
+        "name": "Week 2",
+        "description": "Advanced GraphQL",
+        "lessons": [
+          {
+            "_id": "L1244_201",
+            "name": "Schema Design",
+            "description": "Building effective schemas",
+            "module": "M1244_2"
+          },
+          {
+            "_id": "L1244_202",
+            "name": "Subscriptions",
+            "description": "Real-time data with GraphQL",
+            "module": "M1244_2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "1245",
+    "name": "CS1245 Testing & QA",
+    "number": "CS1245",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "D134",
+    "credits": 3,
+    "description": "Master testing - Jest, Cypress, unit tests, and test automation",
+    "image": "/Images/testing and Qa.jpeg",
+    "modules": [
+      {
+        "_id": "M1245_1",
+        "name": "Week 1",
+        "description": "Testing Fundamentals",
+        "lessons": [
+          {
+            "_id": "L1245_101",
+            "name": "Unit Testing",
+            "description": "Testing individual components",
+            "module": "M1245_1"
+          },
+          {
+            "_id": "L1245_102",
+            "name": "Jest Framework",
+            "description": "JavaScript testing with Jest",
+            "module": "M1245_1"
+          }
+        ]
+      },
+      {
+        "_id": "M1245_2",
+        "name": "Week 2",
+        "description": "End-to-End Testing",
+        "lessons": [
+          {
+            "_id": "L1245_201",
+            "name": "Cypress Basics",
+            "description": "Browser automation testing",
+            "module": "M1245_2"
+          },
+          {
+            "_id": "L1245_202",
+            "name": "Test Automation",
+            "description": "CI/CD and automated testing",
+            "module": "M1245_2"
+          }
+        ]
+      }
+    ]
+  }
+]
