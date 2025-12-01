@@ -32,19 +32,27 @@ export default function CourseRoutes(app, db) {
 
   const findUsersForCourse = async (req, res) => {
     const { cid } = req.params;
-    console.log("Finding users for course:", cid);
     const users = await enrollmentsDao.findUsersForCourse(cid);
-    console.log("Users found:", users);
     res.json(users);
   };
 
   const createCourse = async (req, res) => {
-    const course = await dao.createCourse(req.body);
-    const currentUser = req.session["currentUser"];
-    if (currentUser) {
-      await enrollmentsDao.enrollUserInCourse(currentUser._id, course._id);
+    try {
+      const course = await dao.createCourse(req.body);
+      const currentUser = req.session["currentUser"];
+      if (currentUser) {
+        try {
+          await enrollmentsDao.enrollUserInCourse(currentUser._id, course._id);
+        } catch (enrollError) {
+          // Ignore duplicate enrollment error
+          console.log("Enrollment already exists or error:", enrollError);
+        }
+      }
+      res.json(course);
+    } catch (error) {
+      console.error("Error creating course:", error);
+      res.status(500).json({ error: "Failed to create course" });
     }
-    res.json(course);
   };
 
   const updateCourse = async (req, res) => {
@@ -61,13 +69,21 @@ export default function CourseRoutes(app, db) {
   };
 
   const enrollUserInCourse = async (req, res) => {
-    let { uid, cid } = req.params;
-    if (uid === "current") {
-      const currentUser = req.session["currentUser"];
-      uid = currentUser._id;
+    try {
+      let { uid, cid } = req.params;
+      if (uid === "current") {
+        const currentUser = req.session["currentUser"];
+        uid = currentUser._id;
+      }
+      const status = await enrollmentsDao.enrollUserInCourse(uid, cid);
+      res.json(status);
+    } catch (error) {
+      if (error.code === 11000) {
+        res.status(400).json({ error: "Already enrolled" });
+      } else {
+        res.status(500).json({ error: "Enrollment failed" });
+      }
     }
-    const status = await enrollmentsDao.enrollUserInCourse(uid, cid);
-    res.json(status);
   };
 
   const unenrollUserFromCourse = async (req, res) => {
